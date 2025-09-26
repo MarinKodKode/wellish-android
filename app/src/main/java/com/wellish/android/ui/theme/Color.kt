@@ -2,16 +2,15 @@ package com.wellish.android.ui.theme
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-
-import androidx.compose.ui.graphics.Color
+import androidx.wear.compose.material.Colors
 
 object FitnessColors {
 
     // MARK: - Primary Colors
-    val PrimaryFitnessBlue = Color(0xFF0F172A)        // Replace with your actual hex value
-    val FitnessSuccess = Color(0xFF10B981)            // Replace with your actual hex value
-    val EnergyFitnessOrange = Color(0xFFFBBF24)       // Replace with your actual hex value
-    val ErrorFitnessRed = Color(0xFFEF4444)           // Replace with your actual hex value
+    val PrimaryFitnessBlue = Color(0xFF007AFF)        // Replace with your actual hex value
+    val FitnessSuccess = Color(0xFF34C759)            // Replace with your actual hex value
+    val EnergyFitnessOrange = Color(0xFFFF9500)       // Replace with your actual hex value
+    val ErrorFitnessRed = Color(0xFFFF3B30)           // Replace with your actual hex value
     val PremiumFitnessPurple = Color(0xFFAF52DE)      // Replace with your actual hex value
     val InfoFitnessCyan = Color(0xFF5AC8FA)           // Replace with your actual hex value
 

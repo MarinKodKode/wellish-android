@@ -12,6 +12,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.wellish.android.feature.home.models.SampleChallengeData
+import com.wellish.android.feature.home.views.components.HomeChallengeCard
+import com.wellish.android.feature.home.views.components.TodayWorkoutView
+import com.wellish.android.feature.home.views.subviews.CategoriesSectionView
+import com.wellish.android.feature.home.views.subviews.PopularWorkoutSectionView
+import com.wellish.android.feature.home.views.subviews.TrySomethingNewSectionView
 
 @Composable
 fun MainHomeView(
@@ -22,7 +28,7 @@ fun MainHomeView(
     Box(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(0xFF121212)) // Color de fondo temporal
+            .background(Color(0xFF121212))
     ) {
         LazyColumn(
             modifier = Modifier
@@ -35,9 +41,7 @@ fun MainHomeView(
             }
 
             item {
-                ChallengeSectionSubview(
-                    challenges = getDummyChallenges() // Datos temporales
-                )
+                HomeChallengeCard(SampleChallengeData.getSampleChallenges())
             }
 
             item {
@@ -53,9 +57,7 @@ fun MainHomeView(
             }
 
             item {
-                TrySomethingNewSectionView(
-                    modifier = Modifier.padding(bottom = 30.dp)
-                )
+                TrySomethingNewSectionView()
             }
         }
     }
@@ -81,38 +83,6 @@ fun ChallengeSectionSubview(challenges: List<String>) {
     Text(
         text = "Sección de Desafíos",
         modifier = Modifier.padding(16.dp)
-    )
-}
-
-@Composable
-fun TodayWorkoutView() {
-    Text(
-        text = "Entrenamiento de Hoy",
-        modifier = Modifier.padding(16.dp)
-    )
-}
-
-@Composable
-fun CategoriesSectionView() {
-    Text(
-        text = "Categorías",
-        modifier = Modifier.padding(16.dp)
-    )
-}
-
-@Composable
-fun PopularWorkoutSectionView() {
-    Text(
-        text = "Entrenamientos Populares",
-        modifier = Modifier.padding(16.dp)
-    )
-}
-
-@Composable
-fun TrySomethingNewSectionView(modifier: Modifier = Modifier) {
-    Text(
-        text = "Prueba Algo Nuevo",
-        modifier = modifier.padding(16.dp)
     )
 }
 
